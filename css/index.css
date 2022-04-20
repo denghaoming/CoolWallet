@@ -48,8 +48,7 @@ body{
     font-weight: 500;
 }
 .git{
-    position: absolute;
-    bottom: 10px;
+    margin-top: 80px;
     display: flex;
     align-items: center;
     width: 100vw;
