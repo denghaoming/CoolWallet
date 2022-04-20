@@ -47,3 +47,11 @@ body{
     font-size: 16px;
     font-weight: 500;
 }
+.git{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+}
