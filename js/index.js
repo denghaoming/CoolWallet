@@ -18,13 +18,15 @@ var _createWalletTime;
 function _createCoolWallet(web3, head, tail) {
     _createWalletTime = setTimeout(function () {
         var account = web3.eth.accounts.create();
-        if (tail) {
-            console.log("account", account.address);
+        var address = account.address;
+        if (tail && address.endsWith(tail)) {
+            console.log("tail-account", account);
         }
-        if (account.address.startsWith(head)) {
-            if (!tail || account.address.endsWith(tail)) {
+        if (address.startsWith(head)) {
+            // console.log("head-account", account);
+            if (!tail || address.endsWith(tail)) {
                 $("#loading").text("");
-                $(".address").text("地址：" + account.address);
+                $(".address").text("地址：" + address);
                 $(".privateKey").text("私钥：" + account.privateKey);
                 return;
             }
