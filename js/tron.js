@@ -9,7 +9,7 @@ function createWallet() {
 
     workers = [];
     for (let i = 0; i < workerLen; ++i) {
-        let worker = new Worker('/js/tron-worker.js', { name: 'worker' + i });
+        let worker = new Worker('./js/tron-worker.js', { name: 'worker' + i });
         workers.push(worker);
         worker.postMessage({head: head, tail:tail});
         worker.onmessage = function (event) {
