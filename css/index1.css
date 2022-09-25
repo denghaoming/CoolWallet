@@ -1,0 +1,88 @@
+body {
+    background-color: #F8F8F8;
+    width: 100vw;
+}
+
+.container {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border-color: #999999;
+    margin-right: 20px;
+    width: 80px;
+    height: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.inputToken0 {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border-color: #999999;
+    margin-right: 20px;
+    width: 380px;
+    height: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.create {
+    background-color: #FF5555;
+    border-radius: 8px;
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+}
+
+.result {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100vw;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.address {
+    width: 100vw;
+    margin-bottom: 10px;
+}
+
+.privateKey {
+    width: 100vw;
+    word-wrap: break-word;
+}
+
+.git {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+}
