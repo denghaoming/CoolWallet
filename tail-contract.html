@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/tail-contract.js"></script>
     <link rel="stylesheet" href="./css/index.css">
     <title>Cool Wallet</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="title">创建 ETH、BSC 靓号钱包地址</div>
+        <div class="title">创建部署合约靓号的钱包地址</div>
+        <div>token0：<input id="token0" class="inputToken0" type="text" value="0xa22b5A5118c1d05d0D4c8f1B808DBa22ee17dD8E" /></div>
         <div class="row">
-            <div>开头：<input id="head" class="input" type="text" value="888" /></div>
             <div>尾号：<input id="tail" class="input" type="text" value="" /></div>
         </div>
         <div class="create" onclick="createWallet()">创建钱包</div>
@@ -24,6 +24,7 @@
             <div id="loading"></div>
             <div class="address"></div>
             <div class="privateKey"></div>
+            <div class="contract"></div>
         </div>
         <div class="git"><a href="https://github.com/denghaoming/CoolWallet" target="blank">源码仓库</a></div>
     </div>

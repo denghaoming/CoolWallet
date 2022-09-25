@@ -27,6 +27,16 @@ body{
     padding-left: 3px;
     padding-right: 3px;
 }
+.inputToken0{
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border-color: #999999;
+    margin-right: 20px;
+    width: 380px;
+    height: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
 .create{
     background-color: #FF5555;
     border-radius: 8px;

@@ -4,7 +4,11 @@
 ### 代码少，可断网使用，安全可靠
 ### 
 ### Github 主页在线版本
+#### 创建ETH/BSC靓号钱包
 https://denghaoming.github.io/CoolWallet/index.html
+
+#### 创建Tron/Trx 波场靓号钱包
+https://denghaoming.github.io/CoolWallet/tron.html
 
 ## 创建 Tron 波场靓号钱包地址
 ### 下载本仓库 zip 包，解压，进入文件夹，双击 tron.html，即可
