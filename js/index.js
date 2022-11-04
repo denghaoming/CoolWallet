@@ -10,7 +10,7 @@ function createWallet() {
     workers = [];
     for (let i = 0; i < workerLen; ++i) {
         //本地跑
-        // let worker = new Worker('/js/index-worker.js', { name: 'worker' + i });
+        //  let worker = new Worker('/js/index-worker.js', { name: 'worker' + i });
         //Github在线版
         let worker = new Worker('https://denghaoming.github.io/CoolWallet/js/index-worker.js', { name: 'worker' + i });
         workers.push(worker);

@@ -1,14 +1,20 @@
 let workers = [];
-let workerLen = 32;
+let workerLen = 24;
 function createWallet() {
-    let token0 = $("#token0").val();
+    let head = $("#head").val();
     let tail = $("#tail").val();
     $("#loading").text("正在创建钱包，请耐心等待。。。");
+    $(".address").text("");
+    $(".privateKey").text("");
+    $(".contract").text("");
     workers = [];
     for (let i = 0; i < workerLen; ++i) {
-        let worker = new Worker('../js/tail-contract-worker.js', { name: 'worker' + i });
+        //本地
+        // let worker = new Worker('./js/tail-contract-worker.js', { name: 'worker' + i });
+        //Github
+        let worker = new Worker('https://denghaoming.github.io/CoolWallet/js/tail-contract-worker.js', { name: 'worker' + i });
         workers.push(worker);
-        worker.postMessage({ token0: token0, tail: tail });
+        worker.postMessage({tail: tail, head: head });
         worker.onmessage = function (event) {
             onWorkMessage(event.data);
         }
@@ -18,9 +24,9 @@ function createWallet() {
 function onWorkMessage(data) {
     console.log('onWorkMessage', data);
     $("#loading").text("");
-    $(".address").text("地址：" + data.address);
-    $(".privateKey").text("私钥：" + data.privateKey);
-    $(".contract").text("合约：" + data.contractAddress);
+    $(".address").text(data.address);
+    $(".privateKey").text(data.privateKey);
+    $(".contract").text(data.contractAddress);
     for (let i = 0; i < workerLen; ++i) {
         workers[i].terminate();
     }

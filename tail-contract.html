@@ -15,15 +15,20 @@
 <body>
     <div class="container">
         <div class="title">创建部署合约靓号的钱包地址</div>
-        <div>token0：<input id="token0" class="inputToken0" type="text" value="0xa22b5A5118c1d05d0D4c8f1B808DBa22ee17dD8E" /></div>
+        <div class="row">
+            <div>开头：<input id="head" class="input" type="text" value="" /></div>
+        </div>
         <div class="row">
             <div>尾号：<input id="tail" class="input" type="text" value="" /></div>
         </div>
         <div class="create" onclick="createWallet()">创建钱包</div>
         <div class="result">
             <div id="loading"></div>
+            <div>地址：</div>
             <div class="address"></div>
+            <div>私钥：</div>
             <div class="privateKey"></div>
+            <div>合约：</div>
             <div class="contract"></div>
         </div>
         <div class="git"><a href="https://github.com/denghaoming/CoolWallet" target="blank">源码仓库</a></div>
