@@ -10,9 +10,9 @@ function createWallet() {
     workers = [];
     for (let i = 0; i < workerLen; ++i) {
         //本地
-        // let worker = new Worker('./js/tail-contract-worker.js', { name: 'worker' + i });
+        let worker = new Worker('./js/tail-contract-worker.js', { name: 'worker' + i });
         //Github
-        let worker = new Worker('https://denghaoming.github.io/CoolWallet/js/tail-contract-worker.js', { name: 'worker' + i });
+        // let worker = new Worker('https://denghaoming.github.io/CoolWallet/js/tail-contract-worker.js', { name: 'worker' + i });
         workers.push(worker);
         worker.postMessage({tail: tail, head: head });
         worker.onmessage = function (event) {
