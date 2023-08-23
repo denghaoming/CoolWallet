@@ -3,6 +3,7 @@ let workerLen = 24;
 function createWallet() {
     let head = $("#head").val();
     let tail = $("#tail").val();
+    let token0 = $("#token0").val();
     $("#loading").text("正在创建钱包，请耐心等待。。。");
     $(".address").text("");
     $(".privateKey").text("");
@@ -14,7 +15,7 @@ function createWallet() {
         //Github
         // let worker = new Worker('https://denghaoming.github.io/CoolWallet/js/tail-contract-worker.js', { name: 'worker' + i });
         workers.push(worker);
-        worker.postMessage({tail: tail, head: head });
+        worker.postMessage({tail: tail, head: head,token0:token0 });
         worker.onmessage = function (event) {
             onWorkMessage(event.data);
         }
